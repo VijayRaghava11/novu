@@ -305,5 +305,8 @@ function SpotLightProvider({ children }) {
 
   return <SpotlightContext.Provider value={{ items, addItem, removeItem }}>{children}</SpotlightContext.Provider>;
 }
+function LightProvider({children}){
+//   code goes here
+}
 
 export default Sentry.withProfiler(App);
