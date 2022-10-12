@@ -292,6 +292,9 @@ function SpotLightProvider({ children }) {
     if (!Array.isArray(item)) {
       item = [item];
     }
+    else{
+      return null;
+    }
 
     const newItems = [...items, ...item];
     newItems.sort((a, b) => (b.order || 0) - (a.order || 0));
@@ -305,8 +308,6 @@ function SpotLightProvider({ children }) {
 
   return <SpotlightContext.Provider value={{ items, addItem, removeItem }}>{children}</SpotlightContext.Provider>;
 }
-function LightProvider({children}){
-//   code goes here
-}
+
 
 export default Sentry.withProfiler(App);
